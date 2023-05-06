@@ -1,6 +1,7 @@
 <template>
   <nav>
     <router-link to="/baseView">响应式基础</router-link>
+    <router-link to="/computedView">计算属性</router-link>
   </nav>
   <router-view/>
 </template>
