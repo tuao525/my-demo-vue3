@@ -1,6 +1,7 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import './registerServiceWorker'
-import router from './router'
-
-createApp(App).use(router).mount('#app')
+import { createApp } from "vue"
+import ElementUI from "element-ui"
+import "element-ui/lib/theme-chalk/index.css"
+import "./registerServiceWorker"
+import router from "./router"
+import App from "./App.vue"
+createApp(App).use(router).use(ElementUI).mount("#app")

@@ -10,6 +10,11 @@ const routes = [
     path: '/computedView',
     name: 'computedView',
     component: () => import('../views/ComputedView.vue')
+  },
+  {
+    path: '/listRender',
+    name: 'listRender',
+    component: () => import('../views/ListRender.vue')
   }
 ]
 
