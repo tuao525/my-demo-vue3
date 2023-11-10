@@ -15,6 +15,11 @@ const routes = [
     path: '/listRender',
     name: 'listRender',
     component: () => import('../views/ListRender.vue')
+  },
+  {
+    path: '/formInBind',
+    name: 'formInBind',
+    component: () => import('../views/FormInBind.vue')
   }
 ]
 
