@@ -3,7 +3,8 @@
     <router-link to="/baseView">响应式基础</router-link> |
     <router-link to="/computedView">计算属性</router-link> |
     <router-link to="/listRender">列表渲染</router-link> |
-    <router-link to="/formInBind">表单输入绑定</router-link>
+    <router-link to="/formInBind">表单输入绑定</router-link> |
+    <router-link to="/watchDemo">侦听器</router-link>
   </nav>
   <router-view/>
 </template>
