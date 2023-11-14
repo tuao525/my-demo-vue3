@@ -3,7 +3,7 @@
  * @email: 2250467773@qq.com
  * @Date: 2023-05-06 15:09:54
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-11-10 17:22:51
+ * @LastEditTime: 2023-11-14 14:16:20
  */
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -32,6 +32,11 @@ const routes = [
     path: '/watchDemo',
     name: 'watchDemo',
     component: () => import('../views/WatchDemo.vue')
+  },
+  {
+    path: '/templeteReference',
+    name: 'templeteReference',
+    component: () => import('../views/TempleteReference.vue')
   }
 ]
 
