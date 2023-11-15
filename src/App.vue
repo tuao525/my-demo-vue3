@@ -6,7 +6,8 @@
     <router-link to="/formInBind">表单输入绑定</router-link> |
     <router-link to="/watchDemo">侦听器</router-link> |
     <router-link to="/templeteReference">模板引用</router-link> |
-    <router-link to="/componentBasis">组件基础</router-link>
+    <router-link to="/componentBasis">组件基础</router-link> |
+    <router-link to="/incidentView">事件</router-link>
   </nav>
   <router-view/>
 </template>

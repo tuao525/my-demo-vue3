@@ -3,7 +3,7 @@
  * @email: 2250467773@qq.com
  * @Date: 2023-11-09 10:55:25
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-11-14 16:27:39
+ * @LastEditTime: 2023-11-15 10:05:48
 -->
 <template>
   <div class="home">
@@ -20,7 +20,20 @@
 <script setup>
 import { defineProps, defineEmits } from 'vue'
 // defineProps(['title'])
-const props = defineProps(['title', 'content', 'flag'])
+// const props = defineProps(['title', 'content', 'flag'])
+const props = defineProps({
+  title: {
+    type: String,
+    required: true
+  },
+  content: {
+    type: String
+  },
+  flag: {
+    type: Boolean,
+    default: false
+  }
+})
 // defineEmits(['addFontSize'])
 const emit = defineEmits(['addFontSize'])
 </script>

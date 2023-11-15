@@ -3,7 +3,7 @@
  * @email: 2250467773@qq.com
  * @Date: 2023-05-06 15:09:54
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-11-14 15:58:15
+ * @LastEditTime: 2023-11-15 10:15:08
  */
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -42,6 +42,11 @@ const routes = [
     path: '/componentBasis',
     name: 'componentBasis',
     component: () => import('../views/ComponentBasis.vue')
+  },
+  {
+    path: '/incidentView',
+    name: 'incidentView',
+    component: () => import('../views/IncidentView.vue')
   }
 ]
 
