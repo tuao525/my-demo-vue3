@@ -9,7 +9,8 @@
     <router-link to="/componentBasis">组件基础</router-link> |
     <router-link to="/incidentView">事件</router-link> |
     <router-link to="/vModel">v-model</router-link> |
-    <router-link to="/transmitAttribute">attributes透传</router-link>
+    <router-link to="/transmitAttribute">attributes透传</router-link> |
+    <router-link to="/slotView">插槽</router-link>
   </nav>
   <router-view/>
 </template>

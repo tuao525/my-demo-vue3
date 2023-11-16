@@ -57,6 +57,11 @@ const routes = [
     path: '/transmitAttribute',
     name: 'transmitAttribute',
     component: () => import('../views/TransmitAttribute.vue')
+  },
+  {
+    path: '/slotView',
+    name: 'slotView',
+    component: () => import('../views/SlotView.vue')
   }
 ]
 
