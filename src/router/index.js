@@ -52,6 +52,11 @@ const routes = [
     path: '/vModel',
     name: 'vModel',
     component: () => import('../views/VModel.vue')
+  },
+  {
+    path: '/transmitAttribute',
+    name: 'transmitAttribute',
+    component: () => import('../views/TransmitAttribute.vue')
   }
 ]
 
