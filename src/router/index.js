@@ -3,7 +3,7 @@
  * @email: 2250467773@qq.com
  * @Date: 2023-05-06 15:09:54
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-11-16 10:05:24
+ * @LastEditTime: 2023-11-16 16:45:41
  */
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -62,6 +62,11 @@ const routes = [
     path: '/slotView',
     name: 'slotView',
     component: () => import('../views/SlotView.vue')
+  },
+  {
+    path: '/provideInject',
+    name: 'provideInject',
+    component: () => import('../views/ProvideInject.vue')
   }
 ]
 

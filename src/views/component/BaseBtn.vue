@@ -3,7 +3,7 @@
  * @email: 2250467773@qq.com
  * @Date: 2023-11-09 10:55:25
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-11-16 10:26:01
+ * @LastEditTime: 2023-11-16 17:53:48
 -->
 <template>
   <!--
@@ -14,11 +14,14 @@
    -->
   <button class="large" @click="() => console.log('click my component')">click me</button>
   <p>{{ props.title }}</p>
+  {{ countRef }}
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
+import { defineProps, ref, provide } from 'vue'
 const props = defineProps(['title'])
+const countRef = ref(1)
+provide('title', countRef)
 // const countRef = ref(1)
 // defineExpose({
 //   countRef
