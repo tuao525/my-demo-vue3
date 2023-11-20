@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <router-link to="/baseView">响应式基础</router-link> |
+    <!-- <router-link to="/baseView">响应式基础</router-link> |
     <router-link to="/computedView">计算属性</router-link> |
     <router-link to="/listRender">列表渲染</router-link> |
     <router-link to="/formInBind">表单输入绑定</router-link> |
@@ -13,7 +13,8 @@
     <router-link to="/slotView">插槽</router-link> |
     <router-link to="/provideInject">依赖注入</router-link> |
     <router-link to="/combinedFunction">组合式函数</router-link> |
-    <router-link to="/transition">Transition 组件</router-link>
+    <router-link to="/transition">Transition 组件</router-link> | -->
+    <!-- <router-link to="/todos">dodos</router-link> -->
   </nav>
   <router-view/>
 </template>
