@@ -12,7 +12,8 @@
     <router-link to="/transmitAttribute">attributes透传</router-link> |
     <router-link to="/slotView">插槽</router-link> |
     <router-link to="/provideInject">依赖注入</router-link> |
-    <router-link to="/combinedFunction">组合式函数</router-link>
+    <router-link to="/combinedFunction">组合式函数</router-link> |
+    <router-link to="/transition">Transition 组件</router-link>
   </nav>
   <router-view/>
 </template>
