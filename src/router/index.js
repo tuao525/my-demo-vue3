@@ -67,6 +67,11 @@ const routes = [
     path: '/provideInject',
     name: 'provideInject',
     component: () => import('../views/ProvideInject.vue')
+  },
+  {
+    path: '/combinedFunction',
+    name: 'combinedFunction',
+    component: () => import('../views/CombinedFunction.vue')
   }
 ]
 
