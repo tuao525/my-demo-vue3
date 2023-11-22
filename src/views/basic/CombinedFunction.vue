@@ -3,13 +3,12 @@
  * @email: 2250467773@qq.com
  * @Date: 2023-11-09 10:55:25
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-11-17 16:52:51
+ * @LastEditTime: 2023-11-22 16:34:32
 -->
 <template>
   <div class="home">
-    <div class='left'>
-      {{ x }} - {{ y }}
-      {{ mouse.x }} - {{  mouse.y }}
+    <div class="left">
+      {{ x }} - {{ y }} {{ mouse.x }} - {{ mouse.y }}
       <!-- {{ data }} - {{ error }} -->
       <ul>
         <li v-for="item in data" :key="item.id">
@@ -17,7 +16,7 @@
           <span>{{ item.title }}</span>
         </li>
       </ul>
-      <input type="text" v-model="id">
+      <input type="text" v-model="id" />
       {{ error }}
     </div>
   </div>
@@ -25,7 +24,7 @@
 
 <script setup>
 import { onMounted, onUnmounted, ref, computed } from 'vue'
-import { useFetch, useMouse } from './utile'
+import { useFetch, useMouse } from '../utils/utile'
 const x = ref(0)
 const y = ref(0)
 const mouse = useMouse()
@@ -53,13 +52,12 @@ onUnmounted(() => {
 })
 </script>
 <style lang="less">
-.home{
-    display: flex;
-    justify-content: center;
+.home {
+  display: flex;
+  justify-content: center;
 }
 .left {
-    width:500px;
-    text-align:left
+  width: 500px;
+  text-align: left;
 }
-
 </style>

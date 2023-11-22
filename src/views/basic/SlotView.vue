@@ -3,11 +3,11 @@
  * @email: 2250467773@qq.com
  * @Date: 2023-11-09 10:55:25
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-11-16 15:34:45
+ * @LastEditTime: 2023-11-22 16:36:54
 -->
 <template>
   <div class="home">
-    <div class='left'>
+    <div class="left">
       <SlotDemo v-slot="props">{{ props.title }}</SlotDemo>
       <SlotDemo>{{ message }}</SlotDemo>
 
@@ -31,19 +31,18 @@
 </template>
 
 <script setup>
-import SlotDemo from './component/SlotDemo.vue'
+import SlotDemo from '../component/SlotDemo.vue'
 import { ref } from 'vue'
 const message = ref('click me!')
 const slotRef = ref('active')
 </script>
 <style lang="less">
-.home{
-    display: flex;
-    justify-content: center;
+.home {
+  display: flex;
+  justify-content: center;
 }
 .left {
-    width:500px;
-    text-align:left
+  width: 500px;
+  text-align: left;
 }
-
 </style>

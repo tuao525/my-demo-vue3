@@ -3,19 +3,19 @@
  * @email: 2250467773@qq.com
  * @Date: 2023-11-09 10:55:25
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-11-16 18:05:41
+ * @LastEditTime: 2023-11-22 16:38:39
 -->
 <template>
   <div class="home">
-    <div class='left'>
-    <DependencyInjection />
+    <div class="left">
+      <DependencyInjection />
     </div>
   </div>
 </template>
 
 <script setup>
 import { provide, ref } from 'vue'
-import DependencyInjection from './component/DependencyInjection.vue'
+import DependencyInjection from '../component/DependencyInjection.vue'
 provide('title', '标题')
 
 const location = ref('North Pole')
@@ -27,13 +27,12 @@ const updateLocation = () => {
 provide('location', { location, updateLocation })
 </script>
 <style lang="less">
-.home{
-    display: flex;
-    justify-content: center;
+.home {
+  display: flex;
+  justify-content: center;
 }
 .left {
-    width:500px;
-    text-align:left
+  width: 500px;
+  text-align: left;
 }
-
 </style>

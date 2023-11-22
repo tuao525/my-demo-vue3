@@ -3,30 +3,35 @@
  * @email: 2250467773@qq.com
  * @Date: 2023-11-09 10:55:25
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-11-14 15:14:58
+ * @LastEditTime: 2023-11-22 16:37:01
 -->
 <template>
   <div class="home">
     <div class="left">
-      <input type="text" ref="input">
+      <input type="text" ref="input" />
 
       <h4>与v-for一起使用</h4>
       <!-- ref数组并不能保证与原数组顺序相同 -->
       <ul>
         <li v-for="item in items" :key="item" ref="itemRefs">
-          {{  item }}
+          {{ item }}
         </li>
       </ul>
 
       <h4>函数模板引用</h4>
-      <input type="text" :ref="(el) => {
-        // 动态的 :ref 绑定才能够传入一个函数，当绑定的元素被卸载时，函数也会被调用一次，
-        // 此时的 el 参数会是null,页面数据变化，也会被调用
-        console.log('el:', el)
-      }">
+      <input
+        type="text"
+        :ref="
+          (el) => {
+            // 动态的 :ref 绑定才能够传入一个函数，当绑定的元素被卸载时，函数也会被调用一次，
+            // 此时的 el 参数会是null,页面数据变化，也会被调用
+            console.log('el:', el)
+          }
+        "
+      />
 
       <h4>组件上的ref</h4>
-      <ChildView ref='childRef' />
+      <ChildView ref="childRef" />
       <p>获得子组件上的实例： {{ newRef }}</p>
       <button @click="click">点击</button>
     </div>
@@ -35,7 +40,7 @@
 
 <script setup>
 import { onMounted, ref, watchEffect } from 'vue'
-import ChildView from './component/ChildView.vue'
+import ChildView from '../component/ChildView.vue'
 const input = ref(null)
 const items = ref([1, 2, 3, 4, 5])
 const itemRefs = ref([])
@@ -62,7 +67,6 @@ watchEffect(() => {
     newRef.value = childRef.value.countRef
   }
 })
-
 </script>
 <style lang="less">
 .home {

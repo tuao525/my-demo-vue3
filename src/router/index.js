@@ -3,7 +3,7 @@
  * @email: 2250467773@qq.com
  * @Date: 2023-05-06 15:09:54
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-11-21 15:28:58
+ * @LastEditTime: 2023-11-22 16:40:56
  */
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -11,72 +11,72 @@ const routes = [
   {
     path: '/baseView',
     name: 'baseView',
-    component: () => import('../views/BaseView.vue')
+    component: () => import('../views/basic/BaseView.vue')
   },
   {
     path: '/computedView',
     name: 'computedView',
-    component: () => import('../views/ComputedView.vue')
+    component: () => import('../views/basic/ComputedView.vue')
   },
   {
     path: '/listRender',
     name: 'listRender',
-    component: () => import('../views/ListRender.vue')
+    component: () => import('../views/basic/ListRender.vue')
   },
   {
     path: '/formInBind',
     name: 'formInBind',
-    component: () => import('../views/FormInBind.vue')
+    component: () => import('../views/basic/FormInBind.vue')
   },
   {
     path: '/watchDemo',
     name: 'watchDemo',
-    component: () => import('../views/WatchDemo.vue')
+    component: () => import('../views/basic/WatchDemo.vue')
   },
   {
     path: '/templeteReference',
     name: 'templeteReference',
-    component: () => import('../views/TempleteReference.vue')
+    component: () => import('../views/basic/TempleteReference.vue')
   },
   {
     path: '/componentBasis',
     name: 'componentBasis',
-    component: () => import('../views/ComponentBasis.vue')
+    component: () => import('../views/basic/ComponentBasis.vue')
   },
   {
     path: '/incidentView',
     name: 'incidentView',
-    component: () => import('../views/IncidentView.vue')
+    component: () => import('../views/basic/IncidentView.vue')
   },
   {
     path: '/vModel',
     name: 'vModel',
-    component: () => import('../views/VModel.vue')
+    component: () => import('../views/basic/VModel.vue')
   },
   {
     path: '/transmitAttribute',
     name: 'transmitAttribute',
-    component: () => import('../views/TransmitAttribute.vue')
+    component: () => import('../views/basic/TransmitAttribute.vue')
   },
   {
     path: '/slotView',
     name: 'slotView',
-    component: () => import('../views/SlotView.vue')
+    component: () => import('../views/basic/SlotView.vue')
   },
   {
     path: '/provideInject',
     name: 'provideInject',
-    component: () => import('../views/ProvideInject.vue')
+    component: () => import('../views/basic/ProvideInject.vue')
   },
   {
     path: '/combinedFunction',
     name: 'combinedFunction',
-    component: () => import('../views/CombinedFunction.vue')
+    component: () => import('../views/basic/CombinedFunction.vue')
   },
   {
     path: '/transition',
     name: 'transition',
-    component: () => import('../views/Transition.vue')
+    component: () => import('../views/basic/Transition.vue')
   },
   {
     path: '/todos',

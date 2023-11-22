@@ -3,19 +3,15 @@
  * @email: 2250467773@qq.com
  * @Date: 2023-11-09 10:34:37
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-11-14 17:44:41
+ * @LastEditTime: 2023-11-22 16:41:33
 -->
 <template>
   <div class="home">
-    <div class="left" :style="{fontSize: fontSize + 'px'}">
+    <div class="left" :style="{ fontSize: fontSize + 'px' }">
       <h4>组件基础</h4>
-      <ComponentDemo :title='title' content='这是内容' />
+      <ComponentDemo :title="title" content="这是内容" />
       <h4>配合v-for使用</h4>
-      <ComponentDemo
-        v-for="item in posts"
-        :title="item.title"
-        :key="item.id"
-      >
+      <ComponentDemo v-for="item in posts" :title="item.title" :key="item.id">
       </ComponentDemo>
 
       <h4>监听事件</h4>
@@ -27,26 +23,25 @@
           fontSize = fontSize + 2
       }" /> -->
 
-        <h4>动态组件</h4>
-        <!-- <component />组件是vue中内置组件，类似于tab组件，可用于组件的切换
+      <h4>动态组件</h4>
+      <!-- <component />组件是vue中内置组件，类似于tab组件，可用于组件的切换
               is属性决定了 component 当前渲染的组件
               is属性可以是组件或字符串，当是字符串时代表组件的注册名或者标签名
         -->
-        <button
-          v-for="(_, tab) in tabs"
-          :key="tab"
-          :class="['tab-button', { active: currentTab === tab }]"
-          @click="currentTab = tab"
-        >
-          {{ tab  }}
-        </button>
+      <button
+        v-for="(_, tab) in tabs"
+        :key="tab"
+        :class="['tab-button', { active: currentTab === tab }]"
+        @click="currentTab = tab"
+      >
+        {{ tab }}
+      </button>
       <component :is="tabs[currentTab]" class="tab"></component>
     </div>
   </div>
-
 </template>
 <script setup>
-import ComponentDemo from './component/ComponentDemo.vue'
+import ComponentDemo from '../component/ComponentDemo.vue'
 import BaseView from './BaseView.vue'
 import FormInBind from './FormInBind.vue'
 import WatchDemo from './WatchDemo.vue'
