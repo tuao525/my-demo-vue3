@@ -3,15 +3,28 @@
  * @email: 2250467773@qq.com
  * @Date: 2023-11-09 10:55:32
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-11-21 16:16:23
+ * @LastEditTime: 2023-11-22 14:00:59
 -->
 <template>
   <div class="home">
     <div class="left">
       <section className="todoapp">
-        <Header></Header>
-        <Main></Main>
-        <Footer></Footer>
+        <Header @add="add"></Header>
+        <Main
+          :list="list"
+          :checkedAllStatue="checkedAllStatue"
+          @changedAllStatus="changedAllStatus"
+          @deleteItem="deleteItem"
+          @dblClick="dblClick"
+          @handelClickSelect="handelClickSelect"
+        ></Main>
+        <Footer
+          :list="list"
+          @handleAll="handleAll"
+          @handleActive="handleActive"
+          @handleCompleted="handleCompleted"
+          @handleClearCompleted="handleClearCompleted"
+        ></Footer>
       </section>
     </div>
   </div>
@@ -20,14 +33,78 @@
 import Header from './conponents/Header.vue'
 import Main from './conponents/main.vue'
 import Footer from './conponents/footer.vue'
-// import { reactive, ref } from 'vue'
+import { reactive, ref, watchEffect } from 'vue'
 
-// const inputValue = ref('')
-// const myObject = reactive({
-//   list: [{ id: 0, content: 'This is a todolist!', isEdit: false }]
-// })
+const myObject = reactive({
+  list: [
+    { id: 0, content: 'This is a todolist!1', checked: false, isEdit: false },
+    { id: 1, content: 'This is a todolist!2', checked: true, isEdit: false }
+  ]
+})
+const checkedAllStatue = ref(false)
+const list = ref([])
 
-// const onClick = () => {}
+watchEffect(() => {
+  list.value = myObject.list
+})
+
+// 新增
+const add = (e) => {
+  myObject.list.push({
+    id: myObject.list.length,
+    content: e.value,
+    hecked: false,
+    isEdit: false
+  })
+}
+
+// 改变所有状态
+const changedAllStatus = () => {
+  checkedAllStatue.value = !checkedAllStatue.value
+  myObject.list = myObject.list.map((item) => {
+    return { ...item, checked: !checkedAllStatue.value }
+  })
+}
+
+// 删除
+const deleteItem = (id) => {
+  myObject.list = myObject.list.filter((item) => item.id !== id)
+}
+
+// 双击进入编辑
+const dblClick = (id) => {
+  myObject.list = myObject.list.map((item) => {
+    if (item.id === id) {
+      return { ...item, isEdit: !item.isEdit }
+    } else {
+      return { ...item, isEdit: false }
+    }
+  })
+}
+
+// 点击选中
+const handelClickSelect = (id) => {
+  myObject.list = myObject.list.map((item) => {
+    if (item.id === id) {
+      return { ...item, checked: !item.checked }
+    } else {
+      return item
+    }
+  })
+}
+
+const handleAll = () => {
+  list.value = myObject.list
+}
+const handleActive = () => {
+  list.value = myObject.list.filter((item) => !item.checked)
+}
+const handleCompleted = () => {
+  list.value = myObject.list.filter((item) => item.checked)
+}
+const handleClearCompleted = () => {
+  myObject.list = []
+}
 </script>
 <style lang="less">
 .home {
@@ -290,9 +367,9 @@ body {
   display: block;
 }
 
-.todo-list li .edit {
-  display: none;
-}
+// .todo-list li .edit {
+//   display: none;
+// }
 
 .todo-list li.editing:last-child {
   margin-bottom: -1px;

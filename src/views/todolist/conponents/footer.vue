@@ -3,23 +3,36 @@
  * @email: 2250467773@qq.com
  * @Date: 2023-11-09 10:55:32
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-11-21 15:29:55
+ * @LastEditTime: 2023-11-22 10:38:52
 -->
 <template>
   <footer className="footer">
-    <span className="todo-count"> <strong>0</strong> item left </span>
+    <span className="todo-count">
+      <strong>{{ props.list.length }}</strong> item left
+    </span>
     <ul className="filters">
       <li>
-        <a className="selected" href="#/"> All </a>
+        <a className="selected" href="#/" @click="emit('handleAll')"> All </a>
       </li>
       <li>
-        <a href="#/active">Active</a>
+        <a href="#/active" @click="emit('handleActive')">Active</a>
       </li>
       <li>
-        <a href="#/completed">Completed</a>
+        <a href="#/completed" @click="emit('handleCompleted')">Completed</a>
       </li>
     </ul>
-    <button className="clear-completed">Clear completed</button>
+    <button className="clear-completed" @click="emit('handleClearCompleted')">
+      Clear completed
+    </button>
   </footer>
 </template>
-<script setup></script>
+<script setup>
+import { defineProps, defineEmits } from 'vue'
+const props = defineProps(['list'])
+const emit = defineEmits([
+  'handleAll',
+  'handleActive',
+  'handleCompleted',
+  'handleClearCompleted'
+])
+</script>
