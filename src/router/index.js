@@ -3,7 +3,7 @@
  * @email: 2250467773@qq.com
  * @Date: 2023-05-06 15:09:54
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-11-23 10:03:57
+ * @LastEditTime: 2023-11-23 15:45:39
  */
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -97,6 +97,16 @@ const routes = [
     path: '/useDark',
     name: 'useDark',
     component: () => import('../views/vueuse/UseDark.vue')
+  },
+  {
+    path: '/useStorage',
+    name: 'useStorage',
+    component: () => import('../views/vueuse/UseStorage.vue')
+  },
+  {
+    path: '/useElementBounding',
+    name: 'useElementBounding',
+    component: () => import('../views/vueuse/UseElementBounding.vue')
   }
 ]
 
