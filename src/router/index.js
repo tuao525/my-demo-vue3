@@ -3,7 +3,7 @@
  * @email: 2250467773@qq.com
  * @Date: 2023-05-06 15:09:54
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-11-22 16:40:56
+ * @LastEditTime: 2023-11-23 10:03:57
  */
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -87,6 +87,16 @@ const routes = [
     path: '/todolist',
     name: 'todolist',
     component: () => import('../views/todolist')
+  },
+  {
+    path: '/onClickOutside',
+    name: 'onClickOutside',
+    component: () => import('../views/vueuse/OnClickOutside.vue')
+  },
+  {
+    path: '/useDark',
+    name: 'useDark',
+    component: () => import('../views/vueuse/UseDark.vue')
   }
 ]
 
