@@ -27,7 +27,29 @@
   text-align: center;
   color: #2c3e50;
 }
-
+.home {
+  display: flex;
+  justify-content: center;
+}
+.left {
+  width: 500px;
+  text-align: left;
+}
+.button {
+  padding: 3px 15px;
+  background-color: #44bd87;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin: 0.5rem 0;
+  border-bottom: 2px solid #2e8f5c;
+  text-shadow: 1px 1px 1px #2e8f5c;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  vertical-align: middle;
+  margin: 0 5px;
+}
 nav {
   padding: 30px;
 

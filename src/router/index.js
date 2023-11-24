@@ -3,7 +3,7 @@
  * @email: 2250467773@qq.com
  * @Date: 2023-05-06 15:09:54
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-11-23 15:45:39
+ * @LastEditTime: 2023-11-23 16:11:11
  */
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -107,6 +107,16 @@ const routes = [
     path: '/useElementBounding',
     name: 'useElementBounding',
     component: () => import('../views/vueuse/UseElementBounding.vue')
+  },
+  {
+    path: '/useTimeoutFn',
+    name: 'useTimeoutFn',
+    component: () => import('../views/vueuse/UseTimeoutFn.vue')
+  },
+  {
+    path: '/onLongPress',
+    name: 'onLongPress',
+    component: () => import('../views/vueuse/OnLongPress.vue')
   }
 ]
 
